@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Console demo</title>
   </head>
-  <body>
+  <body style="background-color:rgb(0,201,147);"data-400="background-color:rgb(74,173,255);" data-1000="background-color:rgb(74,173,255);"data-1300="background-color:rgb(0,201,147);    margin-left: auto;
+  margin-right: auto;
+  width: 8em">
     <script src="main.js" type="module" defer></script>
+    <script src="https://unpkg.com/splitting@1.0.5/dist/splitting.min.js"></script>
     <script src="animal.js" type="module" defer></script>
     <link rel="stylesheet" href="./main.css" type="text/css" />
     <script> 
+    Splitting();
       function divHello(name) {
         document.body.innerHTML = `
         <div>
@@ -21,15 +25,16 @@
       divHello("Fulano")</script>
          
 
-<p id="demo"></p>
 <script type = "text/javascript">    function myFunction() {
   var items = ["pikachu", "Aurorus", "bulbasaur", "charmander"];
   var item = items[Math.floor(Math.random()*items.length)];
-  var colors = ["blue", "yellow", "green", "red"];
+  var colors = ["light-blue", "yellow", "light-green", "light-red"];
   var color = colors[Math.floor(Math.random()*items.length)];
 
 var x = "pikachu pokemom"
-document.getElementById("demo").innerHTML = `<div class="animal" style="argin-bottom: 4rem;
+document.getElementById("demo").innerHTML = `<div style="    margin-left: auto;
+    margin-right: auto;
+    width: 8em" class="animal" style="argin-bottom: 4rem;
     /* padding-bottom: rem; */
     align-items: center;
     display: grid;
@@ -42,7 +47,10 @@ document.getElementById("demo").innerHTML = `<div class="animal" style="argin-bo
     
   }
   </script>
-<input type = "button" onclick = "myFunction()" value = "Capture a pokemon">  
+     <div class="one" onclick = "myFunction()">
+      <a href="#"><button class="round-icon">Capture a pokemon<span class="vl"></span><i class="fa fa-download" aria-hidden="true"></i></button></a>
+  </div>
 
+<p id="demo" style=""></p>
   </body>
 </html>

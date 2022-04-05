@@ -1,3 +1,7 @@
+onst updateBackpack = (modify) => {
+  return !modify;
+};
+
 const backpack = {
   name: 'Everyday Backpack',
   volume: 30,
@@ -25,9 +29,9 @@ var wallet = {
   color: 'black',
   isEmpty: true,
   balance: 0,
-  putCash: function (value) {
-    this.balance += value;
-    this.isEmpty = false;
+  putCash: (value) => {
+    wallet.balance += value;
+    wallet.isEmpty = false;
     console.info('We got money');
   },
 };
@@ -41,5 +45,35 @@ pen = {
   color: 'blue',
 };
 
+//javascript allows us to modify object properties
+//even if they are constants
 backpack.pocketNum = 19;
-console.log(backpack['strapLength']);
+
+//sometimes we will face a case in which the object propertie won't be defined by us
+// so to access it we can use bracket notation
+const query = 'strapLength';
+
+//this should print 26 on terminal
+console.log(
+  'Backpack pocket number bracket notation:',
+  backpack['strapLength']['left']
+);
+
+//this should also print 26
+console.log(
+  'Backpack pocket number bracket notation:',
+  backpack.strapLength.left
+);
+
+//can I go crazy and mix both? Run it and check it out
+console.log(
+  'Backpack pocket number bracket notation:',
+  backpack['strapLength'].left
+);
+
+backpack.novo = 32;
+
+console.log('Novo:', backpack);
+
+wallet.putCash(12);
+console.log(wallet.balance);

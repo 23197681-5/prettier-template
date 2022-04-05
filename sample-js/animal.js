@@ -1,37 +1,38 @@
-import Animal from './animal.js';
+import Pokemon from './pokemon.js';
 
-const monkey = new Animal(
-  'monkey',
-  'Gertudres',
+const schuirtle = new Pokemon(
+  'schuirtle',
+  'wather swing',
+  'A monkey that dances',
   'female',
-  'A friendly monkey',
-  '1m',
-  '65kg',
-  13,
-  '2003-9-14',
-  'Omnivoros'
+  'A friendly hug'
 );
 
-const template = (monkey) => {
+var hrComponent = ` <hr style="  height: 10px;
+background-color: black;
+border: 0;"></hr>`;
+
+var pokemonDescriptionStyle =
+  'color: white; font-size: 20px; font-weight: bold';
+const template = (schuirtle) => {
   return `
-  <div>
-	<h3 class="animal">${monkey.name}</h3>
-	<ul>
-	  <li>Animal Species: ${monkey.species}</li>
-	  <li>Gender: ${monkey.gender}</li>
-	  <li>About: ${monkey.description}</li>
-	  <li>Height: ${monkey.height}
-    <li>Weight: ${monkey.weight} </li>
-	  <li>Age: ${monkey.age}</li>
-    <li>Born date: ${monkey.bornDate}</li>
-    <li>Born date: ${monkey.foodType}</li>
+  ${hrComponent}
+  <div style=    margin-left: auto;
+  margin-right: auto;
+  width: 8em">
+	<h3 class="animal">${schuirtle.name}</h3>
+	<ul  style="${pokemonDescriptionStyle}">
+	  <li>Power: ${schuirtle.power}</li>
+	  <li>Gender: ${schuirtle.gender}</li>
+	  <li>About: ${schuirtle.description}</li>
+    <li>Secondary power: ${schuirtle.secundaryPower}</li>
 	</ul>
   </div>
   `;
 };
 
-console.log(monkey);
+console.log(schuirtle);
 
 const main = document.createElement('main');
-main.innerHTML = template(monkey);
+main.innerHTML = template(schuirtle);
 document.body.appendChild(main);
