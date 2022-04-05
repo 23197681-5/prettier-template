@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Console demo</title>
+  </head>
+  <body>
+    <script src="main.js" type="module" defer></script>
+    <script src="animal.js" type="module" defer></script>
+    <link rel="stylesheet" href="./main.css" type="text/css" />
+    <script> 
+      function divHello(name) {
+        document.body.innerHTML = `
+        <div>
+        Hello ${name}
+        </div>
+      
+        `;
+      }
+      divHello("Fulano")</script>
+         
+
+<p id="demo"></p>
+<script type = "text/javascript">    function myFunction() {
+  var items = ["pikachu", "Aurorus", "bulbasaur", "charmander"];
+  var item = items[Math.floor(Math.random()*items.length)];
+  var colors = ["blue", "yellow", "green", "red"];
+  var color = colors[Math.floor(Math.random()*items.length)];
+
+var x = "pikachu pokemom"
+document.getElementById("demo").innerHTML = `<div class="animal" style="argin-bottom: 4rem;
+    /* padding-bottom: rem; */
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0 3rem;
+    width: 100px;
+    color: blue;
+    background-color: ${color};">You captured: ${item}</div>`;
+    
+  }
+  </script>
+<input type = "button" onclick = "myFunction()" value = "Capture a pokemon">  
+
+  </body>
+</html>
